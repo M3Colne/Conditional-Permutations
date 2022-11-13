@@ -101,6 +101,8 @@ int Combinari(int n, int k)
 int R2_AllDisjunct(int n, int nC)
 {
     //This is used only when all condition are disjunct
+    //What I want to believe is that this way, to output the direct answer, is faster than just using the general function to count
+    //This function has to add up 2^nC  -1 terms, so I guess it's good? I don't even know if it's better or worse actually :(
     int sigma = 0;
 
     for (int k = 1; k <= nC; k++)
