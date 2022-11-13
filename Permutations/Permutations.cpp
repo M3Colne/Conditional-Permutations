@@ -143,21 +143,9 @@ int main()
     //Code
     cout << endl;
 
-    const auto s1 = chrono::steady_clock().now();
     R2(vector<char>(nElements, 0), 0, nGenerated);
-    const auto e1 = chrono::steady_clock().now();
-    const auto dur1 = chrono::duration_cast<chrono::duration<double>>(e1- s1).count();
 
     cout << "\n\n" << "Generated_Counting: " << nGenerated << endl;
-
-    const auto s2 = chrono::steady_clock().now();
-    R2_AllDisjunct(vector<char>(nElements, 0), 0, nGenerated);
-    const auto e2 = chrono::steady_clock().now();
-    const auto dur2 = chrono::duration_cast<chrono::duration<double>>(e2 - s2).count();
-
-    cout << "\n\n" << "Generated_Negated: " << nGenerated << endl;
-
-    cout << endl << endl << "Slow: " << dur1 << endl << "Negated: " << dur2;
 
     cin.get();
     cin.get();
